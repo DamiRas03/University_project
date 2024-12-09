@@ -1,0 +1,8 @@
+docker pull postgres:latest
+
+docker run --name your_database-db -e POSTGRES_USER=you -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres:latest
+
+# This is just to check if container is running
+docker ps
+
+docker exec -it your_database-db psql -U you
